@@ -1,0 +1,86 @@
+.pokemon-image {
+  width: 120px;
+  height: 120px;
+}
+.pokemonlist-header .header-bg{
+  padding: 10px;
+}
+.pokemon-card {
+  background: linear-gradient(rgb(168, 255, 152), rgb(214, 162, 228));
+  padding: 1.5rem 0;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 1.6px 1.6px rgba(0, 0, 0, 0.023),
+    0 3.8px 3.8px rgba(0, 0, 0, 0.034), 0 6.9px 6.9px rgba(0, 0, 0, 0.041),
+    0 11.4px 11.4px rgba(0, 0, 0, 0.049), 0 18.8px 18.8px rgba(0, 0, 0, 0.056),
+    0 32.8px 32.8px rgba(0, 0, 0, 0.067), 0 71px 71px rgba(0, 0, 0, 0.09);
+  transition: all 0.2s ease-in-out;
+  min-width: 220px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.pokemon-card:hover{
+  transform: scale(1.1);
+}
+.skeleton-loader{
+  margin-bottom: 30px;
+}
+.pokemon-name {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+.pokemon-type {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pokemon-type-bg img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 11px;
+  top: 9px;
+}
+.pokemon-type-bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin: auto;
+  position: relative;
+}
+.pokemontypegrass {
+  background: #5fbd58;
+  box-shadow: 0 0 20px #5fbd58;
+}
+.pokemontypefire {
+  background: #dc872f;
+  box-shadow: 0 0 20px #dc872f;
+}
+.pokemontypewater {
+  background: #539ddf;
+  box-shadow: 0 0 20px #539ddf;
+}
+.pokemontypebug {
+  background: #92bc2c;
+  box-shadow: 0 0 20px #92bc2c;
+}
+.pokemontypenormal {
+  background: #a0a29f;
+  box-shadow: 0 0 20px #a0a29f;
+}
+.pokemontypefirebg {
+  background: linear-gradient(rgb(255, 185, 113), rgb(255, 185, 113));
+}
+.pokemontypegrassbg {
+  background: linear-gradient(rgb(168, 255, 152), rgb(214, 162, 228));
+}
+.pokemontypewaterbg {
+  background: linear-gradient(rgb(140, 196, 226), rgb(140, 196, 226));
+}
+.pokemontypebugbg {
+  background: linear-gradient(rgb(186, 224, 95), rgb(186, 224, 95));
+}
+.pokemontypenormalbg {
+  background: linear-gradient(rgb(220, 220, 220), rgb(220, 220, 220));
+}

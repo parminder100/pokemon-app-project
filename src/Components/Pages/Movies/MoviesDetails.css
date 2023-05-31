@@ -1,0 +1,89 @@
+.selected-movie-image {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: rgb(6, 10, 17) 0px 0px 26px 4px;
+}
+.moviedetails-genres {
+  font-size: 1.25rem;
+}
+.movidetails-header .header-bg{
+    background-color: #fff;
+    padding:10px;
+}
+.movidetails_content{
+    padding-top: 138px;
+    padding-bottom: 50px;
+}
+.moviedetails-footer footer{
+  margin-top: 0px;
+}
+.moviedetails-name {
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+}
+.fa-language {
+  margin-right: 15px;
+  color: rgb(255 238 0/1);
+  font-size: 24px;
+}
+.moviedetails-language {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  padding-inline-start: 0px;
+  align-items: center;
+}
+.language-name {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.fa-clock-o {
+  margin-right: 15px;
+  color: rgb(255 238 0/1);
+  font-size: 24px;
+}
+.trailer-btn{
+    background-color: rgb(255 238 0/1);
+    padding:15px 20px 15px 20px;
+    border-width: 0px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+.fa-play-circle{
+    margin-right: 10px;
+}
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-container {
+  text-align: center;
+}
+.centered-video {
+  display: block;
+  margin: 0 auto;
+}
+.fa-times-circle {
+  color: red;
+  font-size: 25px;
+}
+.close-button {
+  text-align: end;
+  cursor: pointer;
+}
+.custome-bg {
+  background-image: linear-gradient(
+    to right,
+    rgba(52.5, 31.5, 52.5, 1) calc((50vw - 170px) - 340px),
+    rgba(52.5, 31.5, 52.5, 0.84) 50%,
+    rgba(52.5, 31.5, 52.5, 0.84) 100%
+  );
+}

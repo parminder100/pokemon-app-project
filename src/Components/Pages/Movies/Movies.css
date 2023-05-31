@@ -1,0 +1,28 @@
+.movies-header .header-bg{
+    background-color: #fff;
+    padding:10px;
+}
+.movie-data{
+    padding-top: 86px;
+}
+.movie-image{
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+.movies-item{
+    margin-bottom: 30px;
+}
+.movies-list{
+    text-align: center;
+    cursor: pointer;
+}
+.movie-date{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.movie-name{
+    margin-bottom: 0px;
+    font-weight: 500;
+}
