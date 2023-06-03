@@ -3,10 +3,18 @@ import "../News/News.css";
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Footer from "../../Footer/Footer";
+import PokemonNewsSkeletonLoader from "../../Loader/PokemonNewsSkeletonLoader";
 
 const News = () =>{
     const [newsData, setNewsData] = useState([]);
     const [changeColor, setChangeColor] = useState(true);
+    const [showLoader, setShowLoader] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setShowLoader(false);
+        },3000)
+    },[])
 
     const handleChangeColor = () =>{
         setChangeColor(!changeColor);
@@ -42,7 +50,13 @@ const News = () =>{
             <div className="news-content">
                 <div className="container">
                     <div className="row">
-                            {
+                            {showLoader ? (
+                                Array.from({length:20}).map((index)=>(
+                                    <div key={index} className="col-sm-6 skeleton-loader">
+                                        <PokemonNewsSkeletonLoader />
+                                    </div>
+                                ))
+                            ):(
                                 newsData.map((news, index)=>(
                                     <>
                                         <div className={`col-sm-6 news-items ${index % 2 === 0 ? 'left-image' : 'right-image'}`}>
@@ -55,7 +69,7 @@ const News = () =>{
                                         </div>
                                     </>
                                 ))
-                            }
+                            )}
                     </div>
                 </div>
             </div>

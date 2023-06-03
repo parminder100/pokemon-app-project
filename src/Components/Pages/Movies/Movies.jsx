@@ -3,11 +3,19 @@ import Header from "../../Header/Header";
 import "../Movies/Movies.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../Footer/Footer";
+import PokemonMoviesSkeletonLoader from "../../Loader/PokemonMoviesSkeletonLoader";
 
 const Movies = () =>{
     const navigate = useNavigate();
     const [movieDetail, setMovieDetail] = useState([]);
     const [changeColor, setChangeColor] = useState(true);
+    const [showLoader, setShowLoader] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setShowLoader(false);
+        },3000)
+    },[])
 
     const handleChangeColor = () =>{
         setChangeColor(!changeColor);
@@ -35,7 +43,13 @@ const Movies = () =>{
             </div>
             <div className="container movie-data">
                 <div className="row">
-                    {
+                    {showLoader ?(
+                        Array.from({length:20}).map((index)=>(
+                            <div key={index} className="col-sm-3 skeleton-loader">
+                                <PokemonMoviesSkeletonLoader />
+                            </div>
+                        ))
+                    ):(
                         movieDetail.map((movie)=>(
                             <div key={movie.id} className="col-sm-3 movies-item">
                                 <div onClick={()=>handleMovieDetails(movie.id)} className={`movies-list ${changeColor ? "aboutus-dark-theme":"light-theme"}`}>
@@ -45,7 +59,7 @@ const Movies = () =>{
                                 </div>
                             </div>
                         ))
-                    }
+                    )}
                 </div>
             </div>
             <Footer />

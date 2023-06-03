@@ -152,3 +152,28 @@
     font-size: 27px;
     margin-top: 10px;
 }
+
+
+
+@media (max-width: 575.98px) {
+    .evolution_box{
+        display: block;
+    }
+    .fa-long-arrow-right{
+        display: none;
+    }
+    .pokemon-ability{
+        width: 200px;
+    }
+    .pokemon-ability-list{
+        display: block;
+    }
+    .pokemoninfo-type-image{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-inline-start: 0px;
+    }
+    .pokemoninfo-type{
+        padding-inline-start: 27px;
+    }
+}

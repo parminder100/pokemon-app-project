@@ -34,7 +34,7 @@ const AboutUs = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className={`col-sm-6 ${changeColor ? "aboutus-dark-theme" : "light-theme"}`}>
+                    <div className={`col-sm-6 welcome-content ${changeColor ? "aboutus-dark-theme" : "light-theme"}`}>
                         <div>
                         <p className="company-name"><span>Welcome</span> to Pokedex</p>
                         <p>Donec ac molestie elit. Vestibulum ante ipsum primis in 

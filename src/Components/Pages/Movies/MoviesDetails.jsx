@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../../Footer/Footer";
 import Header from "../../Header/Header";
+import PokemonMoviesDetailsSkeletonLoader from "../../Loader/PokemonMoviesDetailsSkeletonLoader";
 import "../Movies/MoviesDetails.css";
 
 const MoviesDetails = () =>{
@@ -10,6 +11,13 @@ const MoviesDetails = () =>{
     const [trailerKey, setTrailerKey] = useState("");
     const [isPopupOpen, setIsPopupOpen] = useState(false);
     const [changeColor, setChangeColor] = useState(true);
+    const [showLoader, setShowLoader] = useState(true);
+
+    useEffect(()=>{
+        setTimeout(()=>{
+            setShowLoader(false);
+        },3000)
+    },[])
 
     const handleChangeColor = () =>{
         setChangeColor(!changeColor);
@@ -47,6 +55,10 @@ const MoviesDetails = () =>{
             <div className="movidetails-header">
                 <Header includeScrollFunctionality={false} handleChangeColor={handleChangeColor} />
             </div>
+            {
+                showLoader ? (
+                    <PokemonMoviesDetailsSkeletonLoader />
+                ):(
             <div style={{backgroundImage: `url(https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${movieData.backdrop_path}`, backgroundRepeat: "no-repeat", backgroundSize:"cover", backgroundPosition:"left calc((50vw - 170px) - 339px) top"}}>
                 <div className="custome-bg">
                     <div className="container movidetails_content">
@@ -54,7 +66,7 @@ const MoviesDetails = () =>{
                             <div className="col-sm-4">
                                 <img className="selected-movie-image" src={`https://image.tmdb.org/t/p/w500${movieData.poster_path}`} alt={movieData.title} />
                             </div>
-                            <div className="col-sm-8 text-white">
+                            <div className="col-sm-8 selected-movie-detail text-white">
                                 {movieData.genres &&
                                     <span className="moviedetails-genres">{movieData.genres.map((genre)=> genre.name).join(", ")}</span>
                                 }
@@ -74,6 +86,7 @@ const MoviesDetails = () =>{
                     </div>
                 </div>
             </div>
+            )}
             <div className="moviedetails-footer">
                 <Footer />
             </div>

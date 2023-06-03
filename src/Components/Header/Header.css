@@ -84,3 +84,51 @@ body{
 .black-bg {
     background-color: #877d7d;
 }
+
+
+
+
+@media (max-width: 575.98px) {
+    .toggle-theme-bg{
+        flex: 0 0 auto;
+        width: 29.33333333%;
+    }
+    .pokedex-logo{
+        width: 100px;
+    }
+    .carousel .slide img{
+        height: 198px !important;
+    }
+    .navbar-list{
+        text-align: end;
+        margin-top: 20px;
+    }
+    .pokemon-search-input{
+        display: flex;
+        justify-content: end;
+    }
+    .pokemon-search-input{
+        margin-right: -22px;
+    }
+    .navbar-toggler{
+        margin-left: 137px;
+    }
+    .toggle-theme-navbar-bg{
+        flex: 0 0 auto;
+        width: 51.333333%;
+    }
+    .toggle-theme-logo-bg{
+        flex: 0 0 auto;
+        width: 17.333333%;
+    }
+    .togge-theme-row{
+        align-items: baseline !important;
+    }
+    .toggle-bg{
+        top:10px;
+    }
+    .fa-search{
+        top:5px;
+        left:-24px;
+    }
+}

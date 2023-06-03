@@ -87,3 +87,12 @@
     rgba(52.5, 31.5, 52.5, 0.84) 100%
   );
 }
+
+
+
+
+@media (max-width: 575.98px) {
+  .selected-movie-detail{
+    margin-top: 20px;
+  }
+}

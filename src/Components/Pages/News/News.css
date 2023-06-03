@@ -9,3 +9,12 @@
 .news-items{
     margin-bottom: 80px;
 }
+
+
+
+
+@media (max-width: 575.98px) {
+    .news-items{
+        margin-bottom: 15px;
+    }
+}

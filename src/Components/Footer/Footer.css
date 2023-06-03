@@ -84,3 +84,36 @@ footer{
     box-shadow: 0 0 80px 60px red;
   }
 }
+
+
+
+
+
+
+@media (max-width: 575.98px) {
+  footer{
+    padding: 20px 10px 10px 10px;
+  }
+  .copy_right{
+    margin-left: 0px;
+  }
+  .copy-right{
+    font-size: 10px;
+  }
+  .heart{
+    width: 10px;
+    height: 10px;
+    margin-left: 12px;
+  }
+  .heart:before, .heart:after{
+    width: 10px;
+    height: 10px;
+  }
+  .heart:before{
+    top:-5px;
+  }
+  .heart:after {
+    top: 0;
+    left: 5px;
+  }
+}
